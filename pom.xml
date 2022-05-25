@@ -1,18 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-war-plugin</artifactId>
-    <configuration>
-        <webXml>WebContent\WEB-INF\web.xml</webXml>
-    </configuration>
-</plugin>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.devops</groupId>
-  <artifactId>project1</artifactId>
+  <artifactId>project-test-25</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>project1</name>
+  <name>project25</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -22,5 +15,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>3.6.4</version>
+        <configuration>
+          <goalPrefix>plugin</goalPrefix>
+          <outputDirectory>target/dir</outputDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   
 </project>
